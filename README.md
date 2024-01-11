@@ -77,12 +77,12 @@ python MMCTLN/inference_huge_image.py \
 
 
 ## Reproduction Results
-|    Method     |  Dataset  |  F1   |  OA   |  mIoU |
-|:-------------:|:---------:|:-----:|:-----:|------:|
-|  MMCTLN   | Vaihingen | 91.18 | 91.63 | 84.02 |
-|  MMCTLN   |  Potsdam  | 93.37 | 91.95 | 87.77 |
-|  MMCTLN   |  LoveDA   |   -   |   -   | 53.11 |
-|  MMCTLN   |   UAVid   |   -   |   -   | 70.51 |
+|    Method     |  Dataset  |  F1   |  OA   |  mIoU |model_weight|
+|:-------------:|:---------:|:-----:|:-----:|------:|---------:|
+|  MMCTLN   | Vaihingen | 91.18 | 91.63 | 84.02 |[Quark Netdisk](https://pan.quark.cn/s/32266ef9bf21) : 1f29|
+|  MMCTLN   |  Potsdam  | 93.37 | 91.95 | 87.77 |[Quark Netdisk](https://pan.quark.cn/s/dafc3fb8a887) : 3DTA|
+|  MMCTLN   |  LoveDA   |   -   |   -   | 53.11 |[Quark Netdisk](https://pan.quark.cn/s/ecf76810a0f1) : RC25|
+|  MMCTLN   |   UAVid   |   -   |   -   | 70.51 |[Quark Netdisk](https://pan.quark.cn/s/81bf81e07b54) : ejQa|
 
 
 Due to some random operations in the training stage, reproduced results (run once) are slightly different from the reported in paper.
