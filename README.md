@@ -3,7 +3,7 @@
 
 Prepare the following folders to organize this repo:
 ```none
-├── MMCTLN (code)
+├── MAMLN (code)
 ├── pretrain_weights (save the pretrained weights like vit, swin, etc)
 ├── model_weights (save the model weights)
 ├── fig_results (save the masks predicted by models)
@@ -38,7 +38,7 @@ pip install -r GeoSeg/requirements.txt
 ## Training
 
 ```
-python MMCTLN/train_supervision.py -c MMCTLN/config/uavid/***.py
+python MAMLN/train_supervision.py -c MAMLN/config/uavid/***.py
 ```
 Use different **config** to train different models.
 
@@ -46,28 +46,28 @@ Use different **config** to train different models.
 
 For example:
 ```
-python MMCTLN/loveda_test.py -c MMCTLN/config/loveda/***.py -o fig_results/loveda/*** --rgb --val -t 'd4'
+python MAMLN/loveda_test.py -c MAMLN/config/loveda/***.py -o fig_results/loveda/*** --rgb --val -t 'd4'
 ```
 
 ## Testing
 
 **LoveDA**
 ```
-python MMCTLN/loveda_test.py -c MMCTLN/config/loveda/***.py -o fig_results/loveda/*** -t 'd4'
+python MAMLN/loveda_test.py -c MAMLN/config/loveda/***.py -o fig_results/loveda/*** -t 'd4'
 ```
 
 **UAVid**
 ```
-python MMCTLN/inference_uavid.py \
+python MAMLN/inference_uavid.py \
 -i 'data/uavid/uavid_test' \
--c MMCTLN/config/uavid/***.py \
+-c MAMLN/config/uavid/***.py \
 -o fig_results/uavid/*** \
 -t 'lr' -ph 1152 -pw 1024 -b 2 -d "uavid"
 ```
 
 ## Inference on huge remote sensing image
 ```
-python MMCTLN/inference_huge_image.py \
+python MAMLN/inference_huge_image.py \
 -i data/vaihingen/test_images \
 -c GeoSeg/config/vaihingen/***.py \
 -o fig_results/vaihingen/*** \
@@ -79,10 +79,10 @@ python MMCTLN/inference_huge_image.py \
 ## Reproduction Results
 |    Method     |  Dataset  |  F1   |  OA   |  mIoU |model_weight|
 |:-------------:|:---------:|:-----:|:-----:|------:|---------:|
-|  MMCTLN   | Vaihingen | 91.18 | 91.63 | 84.02 |[Quark Netdisk](https://pan.quark.cn/s/32266ef9bf21) : 1f29|
-|  MMCTLN   |  Potsdam  | 93.37 | 91.95 | 87.77 |[Quark Netdisk](https://pan.quark.cn/s/dafc3fb8a887) : 3DTA|
-|  MMCTLN   |  LoveDA   |   -   |   -   | 53.11 |[Quark Netdisk](https://pan.quark.cn/s/ecf76810a0f1) : RC25|
-|  MMCTLN   |   UAVid   |   -   |   -   | 70.51 |[Quark Netdisk](https://pan.quark.cn/s/81bf81e07b54) : ejQa|
+|  MAMLN   | Vaihingen | 91.18 | 91.63 | 84.02 |[Quark Netdisk](https://pan.quark.cn/s/32266ef9bf21) : 1f29|
+|  MAMLN   |  Potsdam  | 93.37 | 91.95 | 87.77 |[Quark Netdisk](https://pan.quark.cn/s/dafc3fb8a887) : 3DTA|
+|  MAMLN   |  LoveDA   |   -   |   -   | 53.11 |[Quark Netdisk](https://pan.quark.cn/s/ecf76810a0f1) : RC25|
+|  MAMLN   |   UAVid   |   -   |   -   | 70.51 |[Quark Netdisk](https://pan.quark.cn/s/81bf81e07b54) : ejQa|
 
 
 Due to some random operations in the training stage, reproduced results (run once) are slightly different from the reported in paper.
